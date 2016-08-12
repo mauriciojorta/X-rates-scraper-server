@@ -16,7 +16,8 @@
     "express": "^4.13.3",
     "node-cron": "^1.1.1",
     "node-telegram-bot-api": "^0.21.1",
-    "request": "^2.69.0"
+    "request": "^2.69.0",
+	"wait.for": "3.10.5"
   },
   "repository": {
     "type": "git",
