@@ -10,8 +10,13 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "ejs": "2.4.1",
-    "express": "4.13.3"
+    "body-parser": "^1.15.0",
+    "cheerio": "^0.20.0",
+    "ejs": "2.3.3",
+    "express": "^4.13.3",
+    "node-cron": "^1.1.1",
+    "node-telegram-bot-api": "^0.21.1",
+    "request": "^2.69.0"
   },
   "repository": {
     "type": "git",
