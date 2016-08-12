@@ -3,7 +3,7 @@ var cheerio = require('cheerio');
 var currency = require('./currency.json');
 var fs = require('fs');
 var outputFilename = "./currency.json";	
-var wait = require('wait.for');
+var wait = require('waitfor');
 
 
 var exchangeRates = (function() {
