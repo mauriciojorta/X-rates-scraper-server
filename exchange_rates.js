@@ -22,6 +22,7 @@ function updateAll(update_status)
 	function updateAllCurrencies(update_status)
 	{
 		var currencies = ["USD - US Dollar", "EUR - Euro", "GBP - British Pound", "JPY - Yen", "INR - Indian Rupee", "CNY - Chinese Yuan",  "ARS - Argentine Peso", "COP - Colombian Peso", "CLP - Chilean Peso", "MXN - Mexican Peso", "BRL - Brazilian Real", "RUB - Russian Ruble"];
+		currencies.sort();
 		for (var i = 0; i<currencies.length; i++)
 		{
 			//console.log("Updating " + currencies[i] + " rates");
@@ -57,7 +58,7 @@ function updateCurrencyRate(currency1, currency2, callback)
 			  return this.type === 'text';
             });
 			console.log(currency1 + " " + currency2 + ""+ data.text());
-			currency[currency1][currency2.substring(0,3)+"_rate"] = Number(data.text().replace(",", ""));
+			currency[currency1][currency2+"_rate"] = Number(data.text().replace(",", ""));
 				  //console.log(currency[currency1][currency2.substring(0,3)+"_rate"]);
 				 return callback(console.log("Ready"));
 				  

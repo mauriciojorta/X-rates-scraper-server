@@ -4,14 +4,13 @@ var bodyParser = require('body-parser');
 var request = require('request');
 var fs = require('fs');
 var cheerio = require('cheerio');
-var currency = require('./currency.json');
 var exchangeRate = require('./exchange_rates');
 var update = require('node-cron');
 var update_status = {ready: true};
 
 update.schedule('0 * * * *', function(){
 	console.log("Updating!");
-	exchangeRate.updateAllCurrencies();
+	exchangeRate.updateAll(update_status);
   console.log('running a task every hour');
 });
 
@@ -27,12 +26,13 @@ app.get('/', function (req, res) {
 	}
 	else
 	{
-		res.sendfile(__dirname + '/currency.json');
+		var currency = require('./currency.json');
+		res.jsonp(currency);
 	}
  	
 });
 
-var server = app.listen(process.env.PORT, function () {
+var server = app.listen(9000, function () {
   var host = server.address().address;
   var port = server.address().port;
 
@@ -41,7 +41,7 @@ var server = app.listen(process.env.PORT, function () {
 
 
 app.listen(app.get('port'), function() {
-//exchangeRate.updateAll(update_status);
+exchangeRate.updateAll(update_status);
 console.log(update);
   console.log('Node app is running on port', app.get('port'));
 });
