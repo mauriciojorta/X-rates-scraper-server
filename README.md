@@ -1,6 +1,6 @@
 # X-rates scraper server
 
-A simple x-rates.com currency exchange rates web scraper server made on node.js
+A simple x-rates.com currency exchange rates web scraper server made on node.js as part of a simple app project (see [Currency Calculator app](https://github.com/mauriciojorta/Currency-Calculator-web-app) for more insight).
 
 ## What does it do?
 
@@ -19,7 +19,7 @@ Then just enter the following commands in your console
 $ git clone git@github.com:mauriciojorta/X-rates-scraper-server.git 
 $ cd X-rates-scraper-server
 $ npm install
-$ npm start #or node index
+$ npm start # Or node index
 ```
 
 The server should be running on [localhost:9000](http://localhost:9000/).

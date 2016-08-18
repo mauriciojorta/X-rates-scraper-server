@@ -23,6 +23,7 @@ function updateAll(update_status)
 	{
 		var currencies = ["USD - US Dollar", "EUR - Euro", "GBP - British Pound", "JPY - Yen", "INR - Indian Rupee", "CNY - Chinese Yuan",  "ARS - Argentine Peso", "COP - Colombian Peso", "CLP - Chilean Peso", "MXN - Mexican Peso", "BRL - Brazilian Real", "RUB - Russian Ruble"];
 		currencies.sort();
+		console.log(currencies.length);
 		for (var i = 0; i<currencies.length; i++)
 		{
 			//console.log("Updating " + currencies[i] + " rates");
