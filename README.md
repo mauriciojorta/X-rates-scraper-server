@@ -4,10 +4,10 @@ A simple x-rates.com currency exchange rates web scraper server made on node.js 
 
 ## What does it do?
 
-It search for the most recent rates for a given set of currencies and save them in a json file (currencies.json) which is displayed through a jsonp display as 
+It searches for the most recent rates for a given set of currencies and save them in a json file (currencies.json) which is displayed through a jsonp display as 
 the index of the server.
 
-The server updates the rates itself each hour through cron library.
+The server updates the rates itself each hour through npm cron dependency.
 
 ## Running the server
 
